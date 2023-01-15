@@ -1,11 +1,20 @@
 export class Materia{
   nome!:string;
 
-  notaA!:number;
-  notaB!:number;
-  notaC!:number;
-  notaD!:number;
+  notas!:number[]
+  media:number = this.calculaMedia()
 
   observacoes!:string
+
+
+  calculaMedia():number{
+    let resultado:number=0;
+
+    this.notas.forEach(element => {
+      resultado+=element
+    });
+
+    return resultado;
+  }
 
 }
