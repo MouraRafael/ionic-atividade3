@@ -1,15 +1,6 @@
-import { Endereco } from "./endereco.model";
-import { Materia } from "./materia.model";
-
-export class Usuario {
-  id!:string;
-  username!:string;
-  senha!:string;
-  nome!:string
+export class Usuario{
   email!:string;
-  cpf!:number;
+  senha!:string;
 
-  materias!: Materia[];
-  endereco!:Endereco;
 
 }
