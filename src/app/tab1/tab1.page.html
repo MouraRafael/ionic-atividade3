@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      Lista de Matérias
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,9 +9,22 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
+      <ion-title size="large">Lista de Matérias</ion-title>
+      <ion-buttons collapse="true" slot="end">
+        <ion-button color="primary" >
+          <ion-icon slot="icon-only" name="add-circle-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
     </ion-toolbar>
   </ion-header>
 
+  <ion-accordion-group>
+    <ion-accordion *ngFor="let materia of materias |async">
+      <ion-item slot="header" color="dark">
+        <ion-label>{{materia.notaA}}</ion-label>
+      </ion-item>
+
+    </ion-accordion>
+  </ion-accordion-group>
 
 </ion-content>
