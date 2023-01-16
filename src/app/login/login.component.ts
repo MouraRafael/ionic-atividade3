@@ -39,7 +39,7 @@ export class LoginComponent implements OnInit {
             pessoa = element;
 
             if(pessoa.email == loga.email && pessoa.senha == loga.senha){
-              this.router.navigateByUrl('main/tabs/tab2')
+              this.router.navigateByUrl(`main/tabs/tab2/${pessoa.id}`)
             }
 
           }
