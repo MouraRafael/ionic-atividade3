@@ -1,4 +1,5 @@
 export class Materia{
+  id!:string;
   nome!:string;
 
   notaA!:number;
