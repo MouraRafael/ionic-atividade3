@@ -13,6 +13,7 @@ import { provideFirebaseApp, getApp, initializeApp } from '@angular/fire/app'
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 
 import { environment } from 'src/environments/environment';
+import { CadastroPessoaModule } from './cadastro-pessoa/cadastro-pessoa.module';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { environment } from 'src/environments/environment';
     IonicModule.forRoot(),
     AppRoutingModule,
     LoginModule,
+    CadastroPessoaModule,
     provideFirebaseApp(()=> initializeApp(environment.firebase)),
     provideFirestore(()=>getFirestore())
   ],

@@ -4,6 +4,7 @@
 
 export const environment = {
   production: false,
+  correiosWS: 'http://viacep.com.br/ws',
   firebase: {
     apiKey: 'AIzaSyAigfIPxFMa5B_AQGtBEx0KuWmTEgl6LDA',
     authDomain: 'atividade3-141cc.firebaseapp.com',

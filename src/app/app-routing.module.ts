@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
+import { CadastroPessoaComponent } from './cadastro-pessoa/cadastro-pessoa.component';
 
 const routes: Routes = [
   {
@@ -10,10 +11,14 @@ const routes: Routes = [
   {
     path:'login',
     component: LoginComponent
+  },{
+    path:'registro',
+    component:CadastroPessoaComponent
   },
   {
     path:'',
-    redirectTo:'main/tabs/tab1',
+    redirectTo:'registro',
+    //redirectTo:'main/tabs/tab1',
     pathMatch:'full'
   }
 ];

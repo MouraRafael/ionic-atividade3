@@ -36,6 +36,36 @@ export class FirebaseService {
     );
   }
 
+  buscarUserName(user: string):Observable<Pessoa[]>{
+    const listaDePessoas = this.listar();
+
+    return listaDePessoas.pipe(
+      map((usuarios)=>
+      usuarios.filter((pessoa)=>{
+
+        const nome = pessoa.username;
+
+        return nome.match(user)
+      })
+      )
+    )
+  }
+  buscarEmail(mail: string):Observable<Pessoa[]>{
+    const listaDePessoas = this.listar();
+
+    return listaDePessoas.pipe(
+      map((usuarios)=>
+      usuarios.filter((pessoa)=>{
+
+        const nome = pessoa.email;
+
+        return nome.match(mail)
+      })
+      )
+    )
+  }
+
+
   encontrarPorId(id:string):Observable<Pessoa>{
     const document = doc(this.fireStore, `${NOME_DB}/${id}`);
 
