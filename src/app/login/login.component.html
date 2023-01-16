@@ -5,7 +5,7 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <form [formGroup]="contactFormGroup" #contactFormGroupDirective="ngForm">
+  <form [formGroup]="loginFormGroup" #loginFormGroupDirective="ngForm">
     <ion-list>
       <ion-item>
         <ion-input
@@ -27,7 +27,7 @@
         ></ion-input>
       </ion-item>
     </ion-list>
-    <ion-button style="width: 80vw; margin: auto; margin-top: 2rem;" expand="block" size="large">
+    <ion-button style="width: 80vw; margin: auto; margin-top: 2rem;" expand="block" size="large" (click)="login()">
       Login
     </ion-button>
   </form>
